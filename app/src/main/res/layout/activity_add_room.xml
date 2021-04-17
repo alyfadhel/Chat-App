@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.example.chatapp.ui.room.AddRoomViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bc"
+        android:padding="8dp"
+        android:orientation="vertical"
+        tools:context=".ui.room.AddRoomActivity">
+
+        <EditText
+            android:id="@+id/room_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Room Name"
+            android:layout_margin="10dp"
+            android:text="@={vm.roomName}"
+            />
+        <EditText
+            android:id="@+id/room_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Room Desc"
+            android:layout_margin="10dp"
+            android:lines="4"
+            android:maxLines="4"
+            android:gravity="start"
+            android:text="@={vm.roomDesc}"
+            />
+        <Button
+            android:id="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:background="@color/purple_500"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:onClick="@{()->vm.addRoom()}"
+            />
+
+    </LinearLayout>
+</layout>
