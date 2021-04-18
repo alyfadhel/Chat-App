@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ChatApp">
-        <activity android:name=".ui.room.AddRoomActivity" android:theme="@style/Theme.ChatApp.noActionBar"></activity>
+        <activity android:name=".ui.roomDetails.RoomDetailsActivity" android:theme="@style/Theme.ChatApp.noActionBar"></activity>
+        <activity
+            android:name=".ui.room.AddRoomActivity"
+            android:theme="@style/Theme.ChatApp.noActionBar" />
         <activity
             android:name=".ui.home.HomeActivity"
             android:theme="@style/Theme.ChatApp.noActionBar" />

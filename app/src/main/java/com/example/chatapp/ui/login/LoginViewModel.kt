@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.example.chatapp.base.BaseViewModel
 import com.example.chatapp.model.dao.UserDao
 import com.example.chatapp.model.dataBase.User
+import com.example.chatapp.ui.Data
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -35,6 +36,7 @@ class LoginViewModel: BaseViewModel<Navigator>() {
             if (task.isSuccessful){
                 val user = task.result?.toObject(User::class.java)
                 navigator?.goToHomeActivity()
+                Data.user = user
             }else{
 
                 messageLiveData.value = task.exception?.localizedMessage

@@ -2,6 +2,7 @@ package com.example.chatapp.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.AdapterView
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chatapp.R
@@ -13,11 +14,25 @@ class RoomAdapter(var roomList: List<Room>): RecyclerView.Adapter<RoomAdapter.Vi
         val itemBinding:LayoutRoomBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.context),
         R.layout.layout_room,parent,false)
         return ViewHolder(itemBinding)
+
     }
+
+
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val room = roomList[position]
         holder.bind(room)
+        if (onItemClickListener!=null){
+            holder.itemView.setOnClickListener {
+                onItemClickListener?.onItemClick(position,room)
+            }
+        }
+
+    }
+
+    var onItemClickListener: OnItemClickListener?=null
+    interface OnItemClickListener{
+        fun onItemClick(position: Int,room: Room)
     }
 
     override fun getItemCount(): Int =

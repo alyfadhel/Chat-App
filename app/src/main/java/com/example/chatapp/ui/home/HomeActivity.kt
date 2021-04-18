@@ -1,13 +1,14 @@
 package com.example.chatapp.ui.home
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.chatapp.R
 import com.example.chatapp.base.BaseActivity
 import com.example.chatapp.databinding.ActivityHomeBinding
+import com.example.chatapp.model.dataBase.Room
+import com.example.chatapp.ui.roomDetails.RoomDetailsActivity
 import com.example.chatapp.ui.room.AddRoomActivity
 
 class HomeActivity :BaseActivity<ActivityHomeBinding,HomeViewModel>(),Navigator {
@@ -41,6 +42,13 @@ class HomeActivity :BaseActivity<ActivityHomeBinding,HomeViewModel>(),Navigator 
     private fun setupView() {
         roomAdapter = RoomAdapter(listOf())
         viewDataBinding.recyclerView.adapter = roomAdapter
+        roomAdapter.onItemClickListener = object :RoomAdapter.OnItemClickListener{
+            override fun onItemClick(position: Int, room: Room) {
+               val intent = Intent(this@HomeActivity, RoomDetailsActivity::class.java)
+                intent.putExtra("room",room)
+                startActivity(intent)
+            }
+        }
 
     }
 
