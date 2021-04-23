@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">ChatApp</string>
+    <string name="email">Email</string>
+    <string name="please_enter_your_email">Please Enter Your Email</string>
+    <string name="password">Password</string>
+    <string name="password_should_be_6_chars_at_least">Password Should Be 6 Chars At Least</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_account">Don\'t Have Account ?!!</string>
+    <string name="register_here">Register Here !!</string>
+    <string name="name">Name</string>
+    <string name="please_enter_your_name">Please Enter Your Name</string>
+    <string name="user_name">User Name</string>
+    <string name="please_enter_your_user_name">Please Enter Your User Name</string>
+    <string name="register">Register</string>
+    <string name="room_name">Room Name</string>
+    <string name="room_desc">Room Desc</string>
+    <string name="add">Add</string>
 </resources>

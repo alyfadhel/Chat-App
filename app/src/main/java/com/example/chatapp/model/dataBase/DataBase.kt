@@ -11,7 +11,7 @@ object DataBase {
         return database.collection(USER_PATH)
     }
     const val Room_PATH = "rooms"
-    fun getRoomCollection(): CollectionReference {
+    fun getRoomsCollection(): CollectionReference {
         return database.collection(Room_PATH)
     }
 }

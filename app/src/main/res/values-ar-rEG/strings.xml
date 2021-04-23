@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ChatApp</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="please_enter_your_email"> من فضلك أدخل البريد الالكتروني</string>
+    <string name="password"> كلمة المرور</string>
+    <string name="password_should_be_6_chars_at_least"> من فضلك أدخل </string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="don_t_have_account"> ليس لديك حساب  ?!!</string>
+    <string name="register_here"> التسجيل !!</string>
+    <string name="name">الأسم</string>
+    <string name="please_enter_your_name">من فضلك أدخل أسمك </string>
+    <string name="user_name">أسم المستخدم</string>
+    <string name="please_enter_your_user_name">من فضلك أدخل أسم المستخدم</string>
+    <string name="register">التسجيل</string>
+    <string name="room_name">أسم الغرفة</string>
+    <string name="room_desc">وصف الغرفة</string>
+    <string name="add">إضافة</string>
+
+</resources>

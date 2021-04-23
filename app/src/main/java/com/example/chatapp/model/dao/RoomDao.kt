@@ -10,12 +10,12 @@ import com.google.firebase.firestore.QuerySnapshot
 class RoomDao {
     companion object{
         fun addRoom(room: Room, onCompleteListener: OnCompleteListener<Void>){
-            val document = DataBase.getRoomCollection().document()
+            val document = DataBase.getRoomsCollection().document()
             room.id = document.id
             document.set(room).addOnCompleteListener(onCompleteListener)
         }
         fun getRooms(onSuccessListener: OnSuccessListener<QuerySnapshot>, onFailureListener: OnFailureListener){
-            DataBase.getRoomCollection()
+            DataBase.getRoomsCollection()
                     .get()
                     .addOnSuccessListener(onSuccessListener)
                     .addOnFailureListener(onFailureListener)
